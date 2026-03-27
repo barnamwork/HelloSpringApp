@@ -6,8 +6,15 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/hello")
 public class HelloController {
 
+    // UC1
     @GetMapping
     public String sayHello() {
         return "Hello from BridgeLabz";
+    }
+
+    // UC2
+    @GetMapping("/query")
+    public String sayHelloQuery(@RequestParam String name) {
+        return "Hello " + name + " from BridgeLabz";
     }
 }
