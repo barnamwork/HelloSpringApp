@@ -31,4 +31,15 @@ public class HelloController {
     public String sayHelloPost(@RequestBody UserDTO user) {
         return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
     }
+    //UC5
+    @PutMapping("/put/{firstName}")
+    public String sayHelloPut(@PathVariable String firstName,
+                              @RequestParam String lastName) {
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz";
+    }
+    @GetMapping("/put/{firstName}")
+    public String testInBrowser(@PathVariable String firstName,
+                                @RequestParam String lastName) {
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz";
+    }
 }
